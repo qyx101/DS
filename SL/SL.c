@@ -1,4 +1,4 @@
-#include "SeqList.h"
+#include "SL.h"
 // 打印
 void SLTPrint(SLTNode* phead)
 {
@@ -171,11 +171,12 @@ void SLTDestroy(SLTNode** pphead)
 {
 	assert(pphead);
 	assert(*pphead);
-	struct SLTNode* cur = *phead;
+	struct SLTNode* cur = *pphead;
 	while (cur)
 	{
 		struct SLTNode* next = cur->next;
 		free(cur);
 		cur = next;
 	}
+	*pphead = NULL;
 }

@@ -1,4 +1,4 @@
-#include "SeqList.h"
+#include "SL.h"
 void t1()
 {
 	// 测试尾插，打印
@@ -89,4 +89,12 @@ int main()
 	//t5();
 	//t6();
 	//t7();
+	// 测试销毁
+	SLTNode* head = NULL;
+	SLTPushBack(&head, 1);
+	SLTPushBack(&head, 2);
+	SLTPushBack(&head, 3);
+	SLTPushBack(&head, 4);
+	SLTPushBack(&head, 5);
+	SLTDestroy(&head);
 }
